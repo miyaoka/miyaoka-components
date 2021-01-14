@@ -10,6 +10,7 @@ export namespace Components {
         "src": string;
     }
     interface MiyaokaImgLoader {
+        "alt": string;
         "delay": number;
         "duration": number;
         "opacity": number;
@@ -41,6 +42,7 @@ declare namespace LocalJSX {
         "src"?: string;
     }
     interface MiyaokaImgLoader {
+        "alt"?: string;
         "delay"?: number;
         "duration"?: number;
         "opacity"?: number;

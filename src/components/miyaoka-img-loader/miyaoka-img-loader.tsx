@@ -7,6 +7,7 @@ import { Component, Host, h, Prop, State } from '@stencil/core'
 })
 export class MiyaokaImgLoader {
   @Prop() src: string
+  @Prop() alt: string = 'image'
   @Prop() scale: number = 0.5
   @Prop() rotate: number = 90
   @Prop() opacity: number = 0
@@ -46,6 +47,7 @@ export class MiyaokaImgLoader {
             this.img = el as HTMLImageElement
           }}
           src={this.src}
+          alt={this.alt}
           style={{
             ...style,
             transitionDuration: `${this.duration}ms`,

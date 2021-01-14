@@ -9,6 +9,7 @@
 
 | Property   | Attribute  | Description | Type     | Default     |
 | ---------- | ---------- | ----------- | -------- | ----------- |
+| `alt`      | `alt`      |             | `string` | `'image'`   |
 | `delay`    | `delay`    |             | `number` | `50`        |
 | `duration` | `duration` |             | `number` | `200`       |
 | `opacity`  | `opacity`  |             | `number` | `0`         |
