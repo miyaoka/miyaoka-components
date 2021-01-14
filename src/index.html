@@ -12,9 +12,21 @@
     <script nomodule src="/build/miyaoka-components.js"></script>
   </head>
   <body>
-    <miyaoka-embed-tweet
-      src="https://twitter.com/Twitter/status/1339350208942125066?s=20"
-    ></miyaoka-embed-tweet>
-    <miyaoka-embed-tweet></miyaoka-embed-tweet>
+    <section>
+      <h2>miyaoka-embed-tweet</h2>
+
+      <h3>tweet</h3>
+      <miyaoka-embed-tweet
+        src="https://twitter.com/Twitter/status/1339350208942125066?s=20"
+      ></miyaoka-embed-tweet>
+
+      <h3>not tweet</h3>
+      <miyaoka-embed-tweet
+        src="https://twitter.com/Twitter/"
+      ></miyaoka-embed-tweet>
+
+      <h3>no src</h3>
+      <miyaoka-embed-tweet></miyaoka-embed-tweet>
+    </section>
   </body>
 </html>
