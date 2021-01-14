@@ -10,8 +10,29 @@
 
     <script type="module" src="/build/miyaoka-components.esm.js"></script>
     <script nomodule src="/build/miyaoka-components.js"></script>
+    <style>
+      .thumb {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 9999px;
+        border: 1px solid #f00;
+        box-sizing: border-box;
+      }
+    </style>
   </head>
   <body>
+    <section>
+      <h2>miyaoka-img-loader</h2>
+      <miyaoka-img-loader
+        class="thumb"
+        src="https://i.imgur.com/VmqURY8b.png"
+      ></miyaoka-img-loader>
+      <!-- <miyaoka-img-loader
+        class="thumb"
+        src="https://i.imgur.com/PfYQeIGh.webp"
+      ></miyaoka-img-loader> -->
+    </section>
     <section>
       <h2>miyaoka-embed-tweet</h2>
 
