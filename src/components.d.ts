@@ -13,6 +13,7 @@ export namespace Components {
         "alt": string;
         "delay": number;
         "duration": number;
+        "loading": string;
         "opacity": number;
         "rotate": number;
         "scale": number;
@@ -45,6 +46,7 @@ declare namespace LocalJSX {
         "alt"?: string;
         "delay"?: number;
         "duration"?: number;
+        "loading"?: string;
         "opacity"?: number;
         "rotate"?: number;
         "scale"?: number;

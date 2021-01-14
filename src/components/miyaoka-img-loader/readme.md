@@ -12,6 +12,7 @@
 | `alt`      | `alt`      |             | `string` | `'image'`   |
 | `delay`    | `delay`    |             | `number` | `50`        |
 | `duration` | `duration` |             | `number` | `200`       |
+| `loading`  | `loading`  |             | `string` | `'lazy'`    |
 | `opacity`  | `opacity`  |             | `number` | `0`         |
 | `rotate`   | `rotate`   |             | `number` | `90`        |
 | `scale`    | `scale`    |             | `number` | `0.5`       |
