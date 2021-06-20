@@ -8,7 +8,7 @@ import { Component, Host, h, Prop, State } from '@stencil/core'
 export class MiyaokaImgLoader {
   @Prop() src: string
   @Prop() alt: string = 'image'
-  @Prop() loading: string = 'lazy'
+  @Prop() loading: 'lazy' | 'auto' | 'eager' = 'lazy'
   @Prop() scale: number = 0.5
   @Prop() rotate: number = 90
   @Prop() opacity: number = 0
