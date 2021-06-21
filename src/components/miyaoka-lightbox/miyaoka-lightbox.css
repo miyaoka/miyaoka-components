@@ -2,13 +2,16 @@
   display: block;
 }
 .container {
+  cursor: pointer;
+  display: inline;
+}
+.backdrop {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 100;
-  cursor: pointer;
   background-color: rgba(64, 62, 62, 0.9);
   background-position: center center;
   background-size: contain;
