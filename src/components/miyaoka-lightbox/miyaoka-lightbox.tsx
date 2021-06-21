@@ -20,10 +20,9 @@ export class MiyaokaLightbox {
                 this.visible = false
               }}
               class="backdrop"
-              style={{
-                'background-image': `url(${this.src})`,
-              }}
-            ></div>
+            >
+              <img src={this.src} />
+            </div>
           )}
           <slot></slot>
         </div>
