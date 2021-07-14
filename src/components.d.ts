@@ -22,6 +22,8 @@ export namespace Components {
     interface MiyaokaLightbox {
         "src": string;
     }
+    interface MiyaokaPrefetch {
+    }
 }
 declare global {
     interface HTMLMiyaokaEmbedTweetElement extends Components.MiyaokaEmbedTweet, HTMLStencilElement {
@@ -42,10 +44,17 @@ declare global {
         prototype: HTMLMiyaokaLightboxElement;
         new (): HTMLMiyaokaLightboxElement;
     };
+    interface HTMLMiyaokaPrefetchElement extends Components.MiyaokaPrefetch, HTMLStencilElement {
+    }
+    var HTMLMiyaokaPrefetchElement: {
+        prototype: HTMLMiyaokaPrefetchElement;
+        new (): HTMLMiyaokaPrefetchElement;
+    };
     interface HTMLElementTagNameMap {
         "miyaoka-embed-tweet": HTMLMiyaokaEmbedTweetElement;
         "miyaoka-img-loader": HTMLMiyaokaImgLoaderElement;
         "miyaoka-lightbox": HTMLMiyaokaLightboxElement;
+        "miyaoka-prefetch": HTMLMiyaokaPrefetchElement;
     }
 }
 declare namespace LocalJSX {
@@ -65,10 +74,13 @@ declare namespace LocalJSX {
     interface MiyaokaLightbox {
         "src"?: string;
     }
+    interface MiyaokaPrefetch {
+    }
     interface IntrinsicElements {
         "miyaoka-embed-tweet": MiyaokaEmbedTweet;
         "miyaoka-img-loader": MiyaokaImgLoader;
         "miyaoka-lightbox": MiyaokaLightbox;
+        "miyaoka-prefetch": MiyaokaPrefetch;
     }
 }
 export { LocalJSX as JSX };
@@ -78,6 +90,7 @@ declare module "@stencil/core" {
             "miyaoka-embed-tweet": LocalJSX.MiyaokaEmbedTweet & JSXBase.HTMLAttributes<HTMLMiyaokaEmbedTweetElement>;
             "miyaoka-img-loader": LocalJSX.MiyaokaImgLoader & JSXBase.HTMLAttributes<HTMLMiyaokaImgLoaderElement>;
             "miyaoka-lightbox": LocalJSX.MiyaokaLightbox & JSXBase.HTMLAttributes<HTMLMiyaokaLightboxElement>;
+            "miyaoka-prefetch": LocalJSX.MiyaokaPrefetch & JSXBase.HTMLAttributes<HTMLMiyaokaPrefetchElement>;
         }
     }
 }
