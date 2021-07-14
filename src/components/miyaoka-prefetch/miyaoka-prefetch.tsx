@@ -5,9 +5,11 @@ import { Component } from '@stencil/core'
   shadow: true,
 })
 export class MiyaokaPrefetch {
-  connectedCallback() {
+  componentDidLoad() {
     const host = location.host
-    const linkList = Array.from(document.querySelectorAll('a'))
+    const linkList = Array.from(
+      document.querySelectorAll('a[data-prefetch]')
+    ) as HTMLAnchorElement[]
 
     const hrefMap = {}
     const sameHostLinks = linkList.filter(({ href }) => {
