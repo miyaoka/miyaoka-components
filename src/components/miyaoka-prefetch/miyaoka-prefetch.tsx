@@ -1,25 +1,17 @@
-import { Component } from '@stencil/core'
+import { Component, State } from '@stencil/core'
 
 @Component({
   tag: 'miyaoka-prefetch',
   shadow: true,
 })
 export class MiyaokaPrefetch {
+  @State() appendedLinks = {}
   componentDidLoad() {
-    const host = location.host
     const linkList = Array.from(
       document.querySelectorAll('a[data-prefetch]')
     ) as HTMLAnchorElement[]
 
-    const hrefMap = {}
-    const sameHostLinks = linkList.filter(({ href }) => {
-      const url = new URL(href)
-      if (url.host !== host || hrefMap[href]) return false
-      hrefMap[href] = true
-      return true
-    })
-
-    sameHostLinks.forEach((link) => {
+    linkList.forEach((link) => {
       const observer = new IntersectionObserver((entryList) => {
         entryList.forEach((entry) => {
           if (!entry.isIntersecting) return
@@ -31,6 +23,8 @@ export class MiyaokaPrefetch {
     })
   }
   addPrefetch(href: string) {
+    if (this.appendedLinks[href]) return
+    this.appendedLinks[href] = true
     const el = document.createElement('link')
     el.rel = 'prefetch'
     el.href = href
